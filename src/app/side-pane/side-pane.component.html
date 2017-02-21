@@ -1,0 +1,28 @@
+<div class="well">
+  <h4>My Dinner</h4>
+  <div class="number-of-guests-view">
+    <div class="input-group number-spinner">
+      <span class="input-group-btn">
+          <button id="minusGuest" class="btn btn-default" data-dir="dwn" (click)="dinner.decreaseGuests()">
+              <span class="glyphicon glyphicon-minus"></span>
+          </button>
+      </span>
+      <input type="text" class="form-control text-center readonly number-of-guests" [value]="dinner.numberOfGuests">
+      <span class="input-group-btn">
+          <button id="plusGuest" class="btn btn-default" data-dir="up" (click)="dinner.increaseGuests()">
+              <span class="glyphicon glyphicon-plus"></span>
+          </button>
+      </span>
+    </div>
+  </div>
+  <hr/>
+</div>
+<div class="well">
+  <h4>My Menu</h4>
+  <hr/>
+  <div id="selectedDishesList"></div>
+  <h3>
+    Total:<span class="label label-default pull-right totalPrice"></span>
+  </h3>
+</div>
+<a class="btn btn-default btn-sm" routerLinkActive="active" routerLink="/blbl" role="button">Confirm Dinner</a>

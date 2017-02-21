@@ -1,0 +1,14 @@
+.bottomleft {
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
+  margin: 0;
+  background-color: khaki;
+  border: 0;
+}
+
+@media (min-width: 500px) {
+  .bottomleft {
+    width: 30%;
+  }
+}

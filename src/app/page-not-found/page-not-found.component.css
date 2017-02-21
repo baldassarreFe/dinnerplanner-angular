@@ -1,0 +1,16 @@
+.panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  margin: 0;
+  background-color: khaki;
+  border: 0;
+}
+
+@media (min-width: 500px) {
+  .panel {
+    width: 30%;
+  }
+}
