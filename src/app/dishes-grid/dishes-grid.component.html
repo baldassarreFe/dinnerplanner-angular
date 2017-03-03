@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h3>{{title | ucwords}}</h3>
+    <span (click)="moreDishes()" class="btn glyphicon glyphicon-xm glyphicon-refresh"></span>
+  </div>
+  <div class="col-lg-12">
+    <dish-card *ngFor="let dish of filteredDishes" [dish]="dish"></dish-card>
+  </div>
+</div>

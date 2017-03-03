@@ -1,0 +1,15 @@
+<div>
+  <div class="input-group number-spinner">
+      <span class="input-group-btn">
+          <button id="minusGuest" class="btn btn-default" data-dir="dwn" (click)="decrement()">
+              <span class="glyphicon glyphicon-minus"></span>
+          </button>
+      </span>
+    <input type="text" class="form-control text-center readonly number-of-guests" [value]="counter">
+    <span class="input-group-btn">
+          <button id="plusGuest" class="btn btn-default" data-dir="up" (click)="increment()">
+              <span class="glyphicon glyphicon-plus"></span>
+          </button>
+      </span>
+  </div>
+</div>

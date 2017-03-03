@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component} from "@angular/core";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,5 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public dateNow: Observable<Date> = Observable.timer(0, 1000).map(() => new Date());
 }

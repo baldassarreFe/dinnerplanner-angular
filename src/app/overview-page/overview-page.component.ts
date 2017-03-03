@@ -2,11 +2,11 @@ import {Component, OnInit} from "@angular/core";
 import {DinnerService} from "../model/dinner.service";
 
 @Component({
-  selector: 'side-pane',
-  templateUrl: './side-pane.component.html',
-  styleUrls: ['./side-pane.component.css']
+  selector: 'overview-page',
+  templateUrl: './overview-page.component.html',
+  styleUrls: ['./overview-page.component.css']
 })
-export class SidePaneComponent implements OnInit {
+export class OverviewPageComponent implements OnInit {
 
   constructor(public dinnerService: DinnerService) {
   }

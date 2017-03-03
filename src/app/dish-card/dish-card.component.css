@@ -1,0 +1,48 @@
+.dish-card {
+  min-height: 340px;
+  max-width: 200px;
+  background-color: snow;
+  padding: 12px;
+  border: 0;
+  margin: 3px;
+}
+
+.dish-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.4s ease-out;
+}
+
+.dish-card .dish-title {
+  margin-top: 5px;
+  line-height: 1.5em;
+  height: 3em;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.dish-card .dish-description {
+  line-height: 1.5em;
+  height: 4.5em;
+  overflow: hidden;
+}
+
+.dish-card .fade-buttons {
+  opacity: 0.2;
+  transition: opacity 0.4s ease-in-out;
+  color: orange;
+  text-align: center;
+}
+
+.dish-card:hover .fade-buttons {
+  opacity: 1;
+  transition: none;
+}
+
+.dish-card > img {
+  min-width: 140px;
+  min-height: 140px;
+  max-width: 140px;
+  max-height: 140px;
+  margin-left: auto;
+  margin-right: auto;
+}

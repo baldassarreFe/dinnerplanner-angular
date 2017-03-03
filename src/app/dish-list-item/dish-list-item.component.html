@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-sm-7">
+    {{dish.name | shorten: 15: '...': true}}
+  </div>
+  <div class="col-sm-5">
+    <span class="badge pull-right remove-button" (click)="dinnerService.removeDish(dish)">&#10005;</span>
+    <span class="badge pull-right">{{pricePerOnePerson * dinnerService.numberOfGuests}}</span>
+  </div>
+</div>
+<hr>

@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="well number-of-guests-view">
+        <h4 style="display: inline;">
+          My Dinner {{dinnerService.numberOfGuests}}
+          <button type="button" class="btn btn-sm btn-default pull-right" routerLink="/home">◀ Go back and edit dinner
+          </button>
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div class="row row-centered">
+    <dish-card *ngFor="let dish of dinnerService.selected" [dish]="dish" [showAddButton]="false"></dish-card>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="well">
+        <h3>
+          Total: {{dinnerService.totalPrice}}
+          <button id="print-button" type="button" class="btn btn-lg btn-default pull-right">Print Full Recipe</button>
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
