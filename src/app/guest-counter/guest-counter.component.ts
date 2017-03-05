@@ -2,8 +2,7 @@ import {Component, OnInit, Input, EventEmitter, Output} from "@angular/core";
 
 @Component({
   selector: 'app-guest-counter',
-  templateUrl: './guest-counter.component.html',
-  styleUrls: ['./guest-counter.component.css']
+  templateUrl: './guest-counter.component.html'
 })
 export class GuestCounterComponent implements OnInit {
 

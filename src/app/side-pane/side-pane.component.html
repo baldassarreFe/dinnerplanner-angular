@@ -9,7 +9,7 @@
   <hr/>
   <dish-list-item *ngFor="let s of dinnerService.selected" [dish]="s"></dish-list-item>
   <h3>
-    Total:<span class="label label-default pull-right totalPrice"></span>
+    Total:<span class="label label-default pull-right totalPrice">{{dinnerService.totalPrice}}</span>
   </h3>
 </div>
 <a [class.disabled]="!(dinnerService.numberOfGuests>0 && dinnerService.selected.length>0)"

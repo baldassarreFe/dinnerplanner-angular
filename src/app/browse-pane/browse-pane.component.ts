@@ -44,6 +44,11 @@ export class BrowsePaneComponent implements OnInit {
     this.searchMode = false;
   }
 
+  public checkEnter(e: KeyboardEvent) {
+    if (e.keyCode == 13 && this.keywords!="")
+      this.search()
+  }
+
   ngOnInit() {
   }
 }

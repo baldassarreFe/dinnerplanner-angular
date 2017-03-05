@@ -12,7 +12,7 @@ import {SidePaneComponent} from "./side-pane/side-pane.component";
 import {BrowsePaneComponent} from "./browse-pane/browse-pane.component";
 import {SpoonacularService} from "./model/spoonacular.service";
 import {DinnerService} from "./model/dinner.service";
-import {DishesGridComponent} from "./dishes-grid/dishes-grid.component";
+import {DishCategoryGridComponent} from "./dishes-grid/dishes-grid.component";
 import {DishCardComponent} from "./dish-card/dish-card.component";
 import {DishListItemComponent} from "./dish-list-item/dish-list-item.component";
 import {ModalModule} from "angular2-modal";
@@ -55,7 +55,7 @@ const appRoutes: Routes = [
     HomeComponent,
     SidePaneComponent,
     BrowsePaneComponent,
-    DishesGridComponent,
+    DishCategoryGridComponent,
     DishCardComponent,
     DishListItemComponent,
     OverviewPageComponent,

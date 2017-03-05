@@ -1,12 +1,13 @@
-<nav class="navbar navbar-default">
+<nav class="navbar">
   <div class="container-fluid">
     <div class="navbar-header">
       <img src="favicon.ico" alt="Homelette">
-      <h1 style="display: inline-block">HOMELETTE</h1>
-      <p style="display: inline-block">From the best chefs in the world directly into your kitchen</p>
+      <h1>Homelette</h1>
+      <span>From the best chefs in the world directly into your kitchen</span>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li>{{dateNow | async | date:'HH:mm:ss'}}</li>
+      <li><a>{{dateNow | async | date:'HH:mm:ss'}}</a></li>
+      <li><a (click)="clearDishes()"><span class="glyphicon glyphicon-trash"></span></a></li>
     </ul>
   </div>
 </nav>

@@ -1,0 +1,25 @@
+.navbar {
+  background-color: orange;
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.navbar img {
+  height: 34px;
+  width: 34px;
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+@media (max-width: 300px) {
+  .navbar img {
+    display: none;
+  }
+}
+
+.navbar-header h1{
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
+}

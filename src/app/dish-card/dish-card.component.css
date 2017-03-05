@@ -5,6 +5,18 @@
   padding: 12px;
   border: 0;
   margin: 3px;
+  display: inline-block;
+  white-space: normal;
+  text-align: initial;
+}
+
+.dish-card > img {
+  min-width: 140px;
+  min-height: 140px;
+  max-width: 140px;
+  max-height: 140px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .dish-card:hover {
@@ -36,13 +48,4 @@
 .dish-card:hover .fade-buttons {
   opacity: 1;
   transition: none;
-}
-
-.dish-card > img {
-  min-width: 140px;
-  min-height: 140px;
-  max-width: 140px;
-  max-height: 140px;
-  margin-left: auto;
-  margin-right: auto;
 }

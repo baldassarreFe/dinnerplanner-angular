@@ -1,37 +1,36 @@
-<div id="allDishes" class="col-md-10">
-  <!--TODO put the search bar in a component and use @Input @Output-->
-  <div class="row search-bar">
-    <h4>Select dish</h4>
-    <div class="col-sm-4">
-      <select class="form-control" id="dishTypeFilter" [(ngModel)]="type">
-        <option value="" selected>All</option>
-        <option value="appetizer">Starters</option>
-        <option value="main course">Main</option>
-        <option value="dessert">Dessert</option>
-      </select>
-    </div>
-    <div class=col-sm-6>
-      <div class=input-group>
-        <input class=form-control placeholder="Enter keywords" [(ngModel)]="keywords">
-        <div class=input-group-btn>
-          <button (click)="search()" [ngClass]="!keywords && !type ? 'btn-default' : 'btn-primary'"
-                  [disabled]="!keywords && !type" type="button" class="btn">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </div>
+<!--TODO put the search bar in a component and use @Input @Output-->
+<div class="row search-bar">
+  <h4>Select dish</h4>
+  <div class="col-sm-4">
+    <select class="form-control" id="dishTypeFilter" [(ngModel)]="type">
+      <option value="" selected>All</option>
+      <option value="appetizer">Starters</option>
+      <option value="main course">Main</option>
+      <option value="dessert">Dessert</option>
+    </select>
+  </div>
+  <div class=col-sm-6>
+    <div class=input-group>
+      <input class=form-control placeholder="Enter keywords" (keyup)="checkEnter($event)" [(ngModel)]="keywords">
+      <div class=input-group-btn>
+        <button (click)="search()" [ngClass]="!keywords && !type ? 'btn-default' : 'btn-primary'"
+                [disabled]="!keywords && !type" type="button" class="btn">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
       </div>
     </div>
-    <div class=col-sm-2>
-      <button (click)="clearSearch()" type="button" class="btn btn-default" [class.hidden]="!keywords && !type">
-        <span class="glyphicon glyphicon-trash"></span>
-      </button>
-    </div>
   </div>
-  <div *ngIf="!searchMode" class="row">
-    <dishes-grid *ngFor="let t of spoonacularService.categories" [title]="t"
-                 [filterFunction]="createTypeFilter(t)"></dishes-grid>
+  <div class=col-sm-2>
+    <button (click)="clearSearch()" type="button" class="btn btn-default" [class.hidden]="!keywords && !type">
+      <span class="glyphicon glyphicon-trash"></span>
+    </button>
   </div>
-  <div *ngIf="searchMode">
-    <dishes-grid title="Search results" type="search" [filterFunction]="createSearchFilter()"></dishes-grid>
-  </div>
+</div>
+<div class="full-height-pre-scrollable">
+<div *ngIf="!searchMode" class="row">
+  <dish-category-grid *ngFor="let t of spoonacularService.categories" [title]="t" [filterFunction]="createTypeFilter(t)"></dish-category-grid>
+</div>
+<div *ngIf="searchMode">
+  <dish-category-grid title="Search results" type="search" [filterFunction]="createSearchFilter()"></dish-category-grid>
+</div>
 </div>
